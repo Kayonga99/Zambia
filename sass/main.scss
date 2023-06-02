@@ -1,9 +1,10 @@
 // colors
 $color-primary: #7ed56f;
 $color-primary-dark: #000000f2;
-$color-text:  #777;
-
+$color-gark-grey:  #777;
+$color-black: #000;
 $color-white: #fff;
+$color-red: #e22626;
 
 // Universal selector 
 *,
@@ -23,7 +24,7 @@ body {
     font-family: "lato", sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: #777;
+    color: $color-gark-grey;
     box-sizing: border-box;
     padding: 3rem;
 }
@@ -172,18 +173,18 @@ animation-duration: 2s;
 // button hover infect
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
 }
 
 // button active effect
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba(209, 6, 6, 0.5); 
+    box-shadow: 0 .5rem 1rem rgba($color-red, 0.5); 
 }
 
 .btn--white {
     background-color: $color-white;
-    color: $color-text;
+    color: $color-gark-grey;
 }
 
 .btn::after {
