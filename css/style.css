@@ -1,217 +1,141 @@
-/* 
-colors:
-
-Light green: #7ed56f;
-Medium green: #55c57a;
-Dark green: #28b485;
-
-*/
-
-/* Universal selector */ 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-} 
-/* root */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
 html {
-    font-size:  62.5%; 
-}
+  font-size: 62.5%; }
 
-/* body selector */ 
 body {
-    font-family: "lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #777;
-    box-sizing: border-box;
-    padding: 3rem;
-}
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  box-sizing: border-box;
+  padding: 3rem; }
 
-/* header */
 .header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(0, 0, 0, 0.95)), url(../assets/images/baech.webp);
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-/* logo container */
-.header__logo-box {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(0, 0, 0, 0.949)), url(../assets/images/baech.webp);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
     position: absolute;
     top: 40px;
-    left: 4rem;
-}
-
-/* logo image */
-.header__logo {
+    left: 4rem; }
+  .header__logo {
     height: 3.5rem;
     border-radius: 6rem;
     animation-name: rotate;
     animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
-
-/* h1 div  */
-.header__text-box {
+    animation-iteration-count: infinite; }
+  .header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-}
+    text-align: center; }
 
-/* h1  */
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 6rem;
-
-}
-
-/* h1 1st span element */
-.heading_1{
+  margin-bottom: 6rem; }
+  .heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 1.5rem;
     animation-name: moveInLeft;
-    animation-duration: 2s;
-}
+    animation-duration: 2s; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.6rem;
+    animation-name: moveInRight;
+    animation-duration: 2s; }
 
-/* h1 span element */
-.heading_2 {
-display: block;
-font-size: 2rem;
-font-weight: 700;
-letter-spacing: 1.6rem;
-animation-name: moveInRight;
-animation-duration: 2s;
-}
-
-/* animations */
-/* outdoo animation  */
 @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-    transform: translateX(-10rem);
-    }
-
-    80% {
-        transform: translateX(2rem);
-    }
-
-100% {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(2rem); }
+  100% {
     opacity: 1;
-    transform: translate(0);
-}
-}
+    transform: translate(0); } }
 
-/* is where life animation  */
 @keyframes moveInRight {
-    0%{
-        opacity: 0;
-        transform: translateX(10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translate(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-    80% {
-        transform: translate(-2rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-/* logo animations */
 @keyframes rotate {
-    0% {
-        opacity: 1;
-        transform: rotateY(0);
-    }
+  0% {
+    opacity: 1;
+    transform: rotateY(0); }
+  100% {
+    opacity: 1;
+    transform: rotate(300deg); } }
 
-    100% {
-        opacity: 1;
-        transform:rotate(300deg);
-    }
-}
-
-/* button animation */
 @keyframes moveInBottom {
-    0%{
-        opacity: 0;
-        transform: translateY(3rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+  animation-duration: 2s;
+  backface-visibility: hidden; }
 
-
-/* button  */
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block ;
-    border-radius: 10rem;
-    transition: all .2s ;
-    position: relative;
-    font-size: 1.6rem;
-    /* animation-name: moveInBottom;
-    animation-duration: 2s;
-    backface-visibility: hidden; */
-}
-
-/* button hover infect */
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-}
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
-/* button active effect */
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba(209, 6, 6, 0.5); 
-}
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(226, 38, 38, 0.5); }
 
 .btn--white {
-    background-color: #fff;
-    color: #777;
-}
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
 
-.btn--white::after {
-    background-color: #fff;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-/* button animations */
 .btn--animated {
-    animation: moveInBottom .5s ease-in-out .75s;
-    animation-fill-mode: backwards;
-}
+  animation: moveInBottom .5s ease-in-out .75s;
+  animation-fill-mode: backwards; }
