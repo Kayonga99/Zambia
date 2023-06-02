@@ -33,7 +33,7 @@ body {
 /* header */
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(18, 23, 21, 0.95)), url(../assets/images/baech.webp);
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(0, 0, 0, 0.95)), url(../assets/images/baech.webp);
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
