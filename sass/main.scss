@@ -69,10 +69,9 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 
-}
 
 // h1 1st span element
-.heading_1{
+&--main{
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -82,13 +81,14 @@ body {
 }
 
 // h1 span element
-.heading_2 {
+ &--sub {
 display: block;
 font-size: 2rem;
 font-weight: 700;
 letter-spacing: 1.6rem;
 animation-name: moveInRight;
 animation-duration: 2s;
+}
 }
 
 // animations
@@ -152,64 +152,65 @@ animation-duration: 2s;
     }
 }
 
-
 // button 
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block ;
-    border-radius: 10rem;
-    transition: all .2s ;
-    position: relative;
-    font-size: 1.6rem;
-    // animation-name: moveInBottom;
-    animation-duration: 2s;
-    backface-visibility: hidden;
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block ;
+        border-radius: 10rem;
+        transition: all .2s ;
+        position: relative;
+        font-size: 1.6rem;
+        animation-duration: 2s;
+        backface-visibility: hidden;
+    }
+    
+    // button hover infect
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+
+             &::after {
+             transform: scaleX(1.4) scaleY(1.6);
+             opacity: 0;
+    }
+    }
+    
+    // button active effect
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-red, 0.5); 
+    }
+    
+    &--white {
+        background-color: $color-white;
+        color: $color-gark-grey;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    // button animations
+    &--animated {
+        animation: moveInBottom .5s ease-in-out .75s;
+        animation-fill-mode: backwards;
+    }
 }
 
-// button hover infect
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($color-black,.2);
-}
-
-// button active effect
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba($color-red, 0.5); 
-}
-
-.btn--white {
-    background-color: $color-white;
-    color: $color-gark-grey;
-}
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.btn--white::after {
-    background-color: $color-white;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-// button animations
-.btn--animated {
-    animation: moveInBottom .5s ease-in-out .75s;
-    animation-fill-mode: backwards;
-}
