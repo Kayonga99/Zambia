@@ -36,17 +36,15 @@ body {
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
 
-// logo container
-.header__logo-box {
-    position: absolute;
-    top: 40px;
-    left: 4rem;
-}
-
-// logo image
-.header__logo {
+    // logo container
+    &__logo-box {
+        position: absolute;
+        top: 40px;
+        left: 4rem;
+    }
+    // logo image
+    &__logo {
     height: 3.5rem;
     border-radius: 6rem;
     animation-name: rotate;
@@ -55,12 +53,13 @@ body {
 }
 
 // h1 div 
-.header__text-box {
+    &__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
 }
 
 // h1 
