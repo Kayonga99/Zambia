@@ -2,14 +2,20 @@
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
+
 //base files
 @import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utils";
+
 // components filess 
-@import "components/button"; 
+@import "components/button";
+
 //pages files
 @import "pages/home";
-//header file
+
+//layout files
 @import "layout/header";
+@import "layout/grid";
+
